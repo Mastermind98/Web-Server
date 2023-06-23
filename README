@@ -1,0 +1,30 @@
+FILES
+1 webserver.py:
+        listens for incoming connections, parses the HTTP requests received from clients, 
+        retrieves the requested file from the server's file system, and 
+        sends an HTTP response containing the file content back to the client
+
+
+2 webclient.py:
+    establishes a TCP connection with the server, sends an HTTP GET request to request a file, and 
+    displays the server's response
+
+
+3 HelloWorld.html:
+    HTML file that can be served by the server. 
+    It can be requested by the client and will be sent as a response by the server.
+
+USAGE
+    1-Ensure Python is installed on your machine.
+
+    2-Download the project files to a directory of your choice.
+
+    3-Open a terminal or command prompt and navigate to the project directory.
+
+    4-Start the server by running the following command:
+        py -3 websocket.py
+    5-In a separate terminal or command prompt, start the client by running the following command:
+        py -3 webclient.py localhost 56006 HelloWorld.text
+    6-To request from web browser enter the following URL:
+        http://localhost:56006/HelloWorld.html  200 OK
+        http://localhost:56006/test.html  404 Not Found
